@@ -30,7 +30,7 @@
     <sonar.organization>software-ingeniaritza-ehu</sonar.organization>
   	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
   	<sonar.projectKey>rides24</sonar.projectKey>
-	<sonar.token>c73dba2df957bf2605316be8ef956ffff363720f</sonar.token>
+	<sonar.login>c73dba2df957bf2605316be8ef956ffff363720f</sonar.login>
   	
 </properties>
 
