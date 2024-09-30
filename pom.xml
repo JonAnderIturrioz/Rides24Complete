@@ -28,7 +28,7 @@
 				<!-- attached to Maven test phase -->
 				<execution>
 					<id>report</id>
-					<phase>install</phase>
+					<phase>test</phase>
 					<goals>
 						<goal>report</goal>
 					</goals>
