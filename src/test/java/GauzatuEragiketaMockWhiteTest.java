@@ -18,7 +18,6 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import dataAccess.DataAccess;
-import domain.Driver;
 import domain.User;
 
 public class GauzatuEragiketaMockWhiteTest {
@@ -55,7 +54,7 @@ static DataAccess sut;
 	@SuppressWarnings({ "unchecked" })
 	@Test
 	public void test1() {
-	
+		String username="testuser";
 		double amount= 10;
 		boolean deposit= true;
 		
@@ -64,7 +63,7 @@ static DataAccess sut;
 			Mockito.when(db.createQuery(Mockito.anyString(), Mockito.any(Class.class))).thenReturn(typedQuery);
 			Mockito.when(typedQuery.getSingleResult()).thenReturn(null);
 			
-			boolean u=sut.gauzatuEragiketa(null, amount, deposit);
+			boolean u=sut.gauzatuEragiketa(username, amount, deposit);
 			
 			assertFalse(u);
 			
@@ -72,8 +71,6 @@ static DataAccess sut;
 		}catch(Exception e) {
 			e.printStackTrace();
 			fail();
-		} finally{
-			sut.close();
 		}
 
 	}
@@ -103,8 +100,6 @@ static DataAccess sut;
 		}catch(Exception e) {
 			e.printStackTrace();
 			fail();
-		} finally{
-			sut.close();
 		}
 
 	}
@@ -134,8 +129,6 @@ static DataAccess sut;
 		}catch(Exception e) {
 			e.printStackTrace();
 			fail();
-		} finally{
-			sut.close();
 		}
 
 	}
@@ -165,8 +158,35 @@ static DataAccess sut;
 		}catch(Exception e) {
 			e.printStackTrace();
 			fail();
-		} finally{
-			sut.close();
+		}
+
+	}
+	
+	@SuppressWarnings({ "unchecked" })
+	@Test
+	public void test5() {
+		String username = "testuser";
+		String pass ="a";
+		String mota ="admin";
+		double amount = 10;
+		boolean deposit = false;
+		
+		try {
+			
+			User user = new User(username, pass, mota);
+			user.setMoney(20);
+			
+			Mockito.when(db.createQuery(Mockito.anyString(), Mockito.any(Class.class))).thenReturn(typedQuery);
+			Mockito.when(typedQuery.getSingleResult()).thenReturn(user);
+			Mockito.doThrow(new RuntimeException("Commit failed")).when(et).commit();
+			
+			boolean u=sut.gauzatuEragiketa(username, amount, deposit);
+			
+			assertFalse(u);
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+			fail();
 		}
 
 	}
