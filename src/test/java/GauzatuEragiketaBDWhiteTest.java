@@ -146,7 +146,6 @@ public class GauzatuEragiketaBDWhiteTest {
 
 	}
 	
-	@SuppressWarnings({ "unchecked" })
 	@Test
 	public void test4() {
 		
