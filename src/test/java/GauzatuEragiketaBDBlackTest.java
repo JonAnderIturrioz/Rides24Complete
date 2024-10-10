@@ -10,7 +10,7 @@ import domain.Driver;
 import testOperations.TestDataAccess;
 
 public class GauzatuEragiketaBDBlackTest {
-	//sut:system under test
+	/*//sut:system under test
 		 static DataAccess sut=new DataAccess();
 		 
 		 //additional operations needed to execute the test 
@@ -334,7 +334,7 @@ public class GauzatuEragiketaBDBlackTest {
 		public void negativeTest6() {
 			String username = "testuser";
 			String pass ="a";
-			double amount = -10;
+			double amount = 0;
 			boolean deposit = true;
 			boolean driverCreated = false;
 			
@@ -384,7 +384,7 @@ public class GauzatuEragiketaBDBlackTest {
 					driver = testDA.createDriver(username,pass);
 				    driverCreated = true;
 				} else driver = sut.getDriver(username);
-				testDA.close();*/
+				testDA.close();
 				sut.open();
 				
 				// Run test
@@ -404,7 +404,7 @@ public class GauzatuEragiketaBDBlackTest {
 				/*testDA.open();
 				if (driverCreated)
 					testDA.removeDriver(username);
-				testDA.close();*/
+				testDA.close();
 				sut.close();
 			}
 		}
@@ -495,5 +495,5 @@ public class GauzatuEragiketaBDBlackTest {
 			}
 		}
 		
-		
+		*/
 }

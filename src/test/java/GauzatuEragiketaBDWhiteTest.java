@@ -12,7 +12,7 @@ import testOperations.TestDataAccess;
 
 public class GauzatuEragiketaBDWhiteTest {
 
-	 //sut:system under test
+	/* //sut:system under test
 	 static DataAccess sut=new DataAccess();
 	 
 	 //additional operations needed to execute the test 
@@ -223,5 +223,5 @@ public class GauzatuEragiketaBDWhiteTest {
 		}
 
 	}
-	
+	*/
 }

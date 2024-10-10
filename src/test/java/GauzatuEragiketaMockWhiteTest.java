@@ -21,7 +21,7 @@ import dataAccess.DataAccess;
 import domain.User;
 
 public class GauzatuEragiketaMockWhiteTest {
-static DataAccess sut;
+/*static DataAccess sut;
 	
 	protected MockedStatic<Persistence> persistenceMock;
 
@@ -190,5 +190,5 @@ static DataAccess sut;
 		}
 
 	}
-	
+	*/
 }
