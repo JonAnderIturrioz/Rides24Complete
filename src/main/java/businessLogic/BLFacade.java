@@ -62,7 +62,7 @@ public interface BLFacade {
 	 *                                           the driver
 	 */
 	@WebMethod
-	public Ride createRide(String from, String to, Date date, int nPlaces, float price, String driverName)
+	public Ride createRide(Ride ride)
 			throws RideMustBeLaterThanTodayException, RideAlreadyExistException;
 
 	/**
