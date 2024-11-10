@@ -62,7 +62,6 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.close();
 
 		return departLocations;
-
 	}
 	
 	/**
@@ -74,7 +73,6 @@ public class BLFacadeImplementation implements BLFacade {
 		List<String> departLocations = getDepartCities();
 		
 		return (ExtendedIterator<String>) new ExtendedCityIterator(departLocations);
-
 	}
 
 	/**
