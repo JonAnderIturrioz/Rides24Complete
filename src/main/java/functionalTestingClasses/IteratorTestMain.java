@@ -11,10 +11,10 @@ public class IteratorTestMain {
 
 	public static void main(String[] args) {
 		// the BL is local
-		ConfigXML config = ConfigXML.getInstance();
+		
 		BLFacade blFacade;
 		try {
-			blFacade = new BusinessLogicFactory().createBusinessLogic(config);
+			blFacade = new BusinessLogicFactory().createBusinessLogic();
 			
 			ExtendedIterator<String> i = blFacade.getDepartCitiesIterator();
 			String c;

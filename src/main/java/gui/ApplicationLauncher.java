@@ -27,7 +27,7 @@ public class ApplicationLauncher {
 
 			BusinessLogicFactory factory = new BusinessLogicFactory();
 			
-			appFacadeInterface = factory.createBusinessLogic(c);
+			appFacadeInterface = factory.createBusinessLogic();
 
 			MainGUI.setBussinessLogic(appFacadeInterface);
 			MainGUI a = new MainGUI();
@@ -40,7 +40,5 @@ public class ApplicationLauncher {
 			System.out.println("Error in ApplicationLauncher: " + e.toString());
 		}
 		// a.pack();
-
 	}
-
 }

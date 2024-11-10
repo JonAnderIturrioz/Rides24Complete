@@ -11,8 +11,9 @@ import dataAccess.DataAccess;
 
 public class BusinessLogicFactory {
 
-	public BLFacade createBusinessLogic(ConfigXML c) throws MalformedURLException {
+	public BLFacade createBusinessLogic() throws MalformedURLException {
 	
+		ConfigXML c = ConfigXML.getInstance();
 		
 		if (c.isBusinessLogicLocal()) {
 
