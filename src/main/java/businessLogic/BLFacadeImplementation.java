@@ -9,19 +9,19 @@ import javax.jws.WebService;
 
 import configuration.ConfigXML;
 import dataAccess.DataAccess;
-import domain.Ride;
-import domain.Traveler;
-import domain.User;
 //import domain.Admin;
 import domain.Alert;
 import domain.Booking;
 import domain.Car;
+import domain.Complaint;
 import domain.Discount;
 import domain.Driver;
-import domain.Complaint;
 import domain.Movement;
-import exceptions.RideMustBeLaterThanTodayException;
+import domain.Ride;
+import domain.Traveler;
+import domain.User;
 import exceptions.RideAlreadyExistException;
+import exceptions.RideMustBeLaterThanTodayException;
 
 /**
  * It implements the business logic as a web service.
@@ -62,6 +62,18 @@ public class BLFacadeImplementation implements BLFacade {
 		dbManager.close();
 
 		return departLocations;
+
+	}
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	@SuppressWarnings("unchecked")
+	@WebMethod
+	public ExtendedIterator<String> getDepartCitiesIterator() {
+		List<String> departLocations = getDepartCities();
+		
+		return (ExtendedIterator<String>) new ExtendedCityIterator(departLocations);
 
 	}
 
