@@ -72,7 +72,7 @@ public class BLFacadeImplementation implements BLFacade {
 	public ExtendedIterator<String> getDepartCitiesIterator() {
 		List<String> departLocations = getDepartCities();
 		
-		return (ExtendedIterator<String>) new ExtendedCityIterator(departLocations);
+		return new ExtendedCityIterator(departLocations);
 	}
 
 	/**
