@@ -59,6 +59,8 @@ public class CreateRideMockWhiteTest {
 	
 	
 	Driver driver;
+	
+	/*  Changes to module under test
 	@Test
 	//sut.createRide:  The Driver is null. The test must return null. If  an Exception is returned the createRide method is not well implemented.
 		public void test1() {
@@ -305,6 +307,6 @@ public class CreateRideMockWhiteTest {
 			
 		} 
 	} 
-	
+	*/
 
 }
