@@ -1,7 +1,10 @@
-package businessLogic;
+package functionalTestingClasses;
 
 import java.net.MalformedURLException;
 
+import businessLogic.BLFacade;
+import businessLogic.BusinessLogicFactory;
+import businessLogic.ExtendedIterator;
 import configuration.ConfigXML;
 
 public class IteratorTestMain {
